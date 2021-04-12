@@ -1,0 +1,187 @@
+*{
+    padding: 0px;
+    margin: 0px;
+
+}
+body{
+    /*background: linear-gradient(to right top, #65dfc9, #6cdbed); */
+    background: #65dfc9;
+}
+
+/* importacoa das fontes */
+@font-face{
+    font-family: "theboldfont";
+    src: url("../Fonte/theboldfont.ttf") format("truetype");
+}
+
+
+@font-face{
+    font-family: "Heatslide";
+    src: url("../Fonte/Heatslide.otf") format("opentype");
+}
+
+/* conteudo central */
+.conteudo{
+ 
+    width: 400px;
+    
+    margin: 0px auto;
+    margin-top: 50px;
+    color: white;
+    font-family: 'theboldfont';
+    text-align: center;
+    align-content: center;
+}
+
+.conteudo .cabecari{
+    margin-bottom: 10px;
+}
+
+.conteudo .avatar{
+
+    width: 150px;
+    height: 150px;
+    border-radius: 100px;
+    margin: 10px auto;
+    margin-bottom: 10px;
+    border: 4px solid white;
+}
+
+.conteudo .descricao h1{
+
+    margin-bottom: 10px;
+}
+
+.conteudo .descricao p{
+    margin-bottom: 10px;
+}
+
+.conteudo .links {
+    padding: 5px;
+    margin-bottom: 20px;
+}
+
+.conteudo .links a{
+    padding: 15px;
+    text-decoration: none;
+}
+
+.conteudo .links i{
+    padding: 10px;
+    color: white;
+    font-size: 30px;
+    transition: 0.5s;
+    transition-property: color;
+    
+}
+
+
+.conteudo .links i:hover{
+    
+    color: black;
+    
+}
+.conteudo .links span{
+    padding: 10px;
+    text-decoration: none;
+    margin-bottom: 100px;
+    transition: 0.5s;
+    transition-property: color;
+    
+}
+
+.conteudo .links span:hover{
+    
+    color: black;
+    border-bottom: 4px solid black;
+}
+
+.conteudo .Qr_contacto p{
+    margin-bottom: 10px;
+}
+
+.conteudo .Qr_contacto .Qrcode{
+    width: 150px;
+    height: 150px;
+    margin-top:5px;
+    margin-left: 20px;
+    border: 4px solid white;
+    
+}
+
+
+
+/* Tratamento do slide bar*/
+
+.slidebar{
+    background:#65dfc9;
+    margin-top: 0px;
+    padding-top: 30px;
+    position: fixed;
+    left: 0px;
+    width: 200px;
+    height: 100%;
+    transition: 0.5s;
+    transition-property: left;
+    
+    visibility: hidden;
+}
+
+
+.slidebar a{
+    color: #fff;
+    display: block;
+    width: 100%;
+    line-height: 60px;
+    text-decoration: none;
+    padding-left: 40px;
+    box-sizing: border-box;
+    transition: 0.5s;
+    transition-property: background;
+    font-family: 'theboldfnt';
+
+
+}
+.slidebar i{
+    padding-right: 10px;
+    transition: 0.5s;
+    transition-property: left;
+    font-size: 30px;
+}
+
+.slidebar i:hover{
+    color: black;
+}
+/* conexao entre o botao e o slidebar*/
+
+
+label #sidebar_btn{
+    z-index: 1;
+    color: #fff;
+    position: fixed;
+    cursor: pointer;
+    left: 20px;
+    top: 20px;
+    font-size: 20px;
+    margin: 5px 0;
+    transition: 0.5s;
+    transition-property: background;
+
+}
+
+label #sidebar_btn:hover{
+    color: black;
+}
+
+#check:checked ~ .slidebar{
+    visibility: visible;
+}
+
+#check:checked ~ .content {
+    margin-left: 60px;
+}
+
+#check{
+    display: none;
+}
+

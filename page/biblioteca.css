@@ -1,0 +1,298 @@
+.content{
+    position: relative;
+    background-color: red;
+    width: 1000px;
+    height: 1000px;
+}
+
+/* estilisar o cabecario da apresentacao */
+
+
+
+.cabecario{
+    position: absolute;
+    left: 40%;
+    top: 30%;
+    padding: 10px;
+    margin: 30px auto;
+    font-family: 'theboldfnt';
+}
+
+ .cabecario .avatar{
+    width: 150px;
+    height: 150px;
+    border-radius: 100px;
+    margin: 0px auto;
+    margin-bottom: 100px;
+    border: 4px solid white;
+}
+
+.descricao{
+    padding: 10px;
+    font-size: 1rem;
+    color: white;
+    
+    width: 600px;
+    text-align: center;
+}
+
+.descricao h1{
+    margin-bottom: 5px;
+    font-size: 40px;
+    font-family: 'theboldfnt';
+    color: white;
+}
+.descricao h1 span{
+   font-family: 'theboldfnt';
+    color: black; 
+}
+
+
+.descricao p{
+    font-size: 25px;
+    font-family: 'ariel';
+    
+}
+
+
+.descricao p span{
+    font-family: 'theboldfnt';
+    color: white;
+    background-color: black;
+    border-radius:2px 4px;
+}
+
+.links{
+    
+    color: white;
+    padding: 5px;
+    width: 500px;
+    
+    content: center;   
+}
+
+.links a{
+    padding: 15px;
+    text-decoration: none;
+    
+
+}
+
+.links a span{
+    text-decoration: none;
+}
+
+
+.links i{
+    padding: 10px;
+    color: white;
+    font-size: 30px;
+    transition: 0.5s;
+    transition-property: color;
+    
+}
+.links i:hover{
+    
+    color: black;
+}
+
+.rotulo{
+    position: absolute;
+    top: 500px;
+    left:25px;
+    color: white;
+    width: 500px;
+    content:center;
+    
+    
+}
+
+.rotulo span{
+    padding: 5px;
+    margin-bottom: 15px;
+}
+
+.Qrcode{
+    
+    position: relative;
+    left: 20px;
+    color: white;
+    width: 500px;
+    content:center;
+    align: center;
+    margin-top:40px;
+}
+.Qrcode img{
+    width: 150px;
+    height: 150px;
+    margin-top:5px;
+    margin-left: 20px;
+    border: 4px solid white;
+    
+}
+
+
+.sidebar{
+    position:relative;
+    background: black;
+    width: 250px;
+    height:100%;
+}
+
+
+
+header{
+    position: fixed;
+    background: #22242A;
+    padding: 20px;
+    width: 100%;
+    height: 30px;
+}
+
+.left-area h3{
+    color: #fff;
+    margin:0px;
+    text-transform: uppercase;
+    font-size: 22px;
+    font-weight: 900;
+}
+
+.left-area span{
+    color: #1DC4E7;
+}
+
+.logout_btn{
+    padding: 5px;
+    background: #1983D3;
+    text-decoration: none;
+    float: right;
+    margin-top: -30px;
+    margin-right: 40px;
+    border-radius: 2px;
+    font-size: 15px;
+    font-weight: 600px;
+    color:#fff;
+    transition: 0.5s;
+    transition-property: background;
+}
+
+logout_btn:hover{
+    background: #0D9D0B;
+}
+.slidebar{
+    background: #2F323A;
+    margin-top: 70px;
+    padding-top: 30px;
+    position: fixed;
+    left: 0px;
+    width: 250px;
+    height: 100%;
+    transition: 0.5s;
+    transition-property: left;
+}
+
+.slidebar .profile_image{
+    width: 100px;
+    height: 100px;
+    border-radius: 100px;
+    margin-bottom: 10px;
+}
+
+.slidebar h4{
+    color:#ccc;
+    margin-top: 0px;
+    margin-bottom: 20px;
+}
+
+.slidebar a{
+    color: #fff;
+    display: block;
+    width: 100%;
+    line-height: 60px;
+    text-decoration: none;
+    padding-left: 40px;
+    box-sizing: border-box;
+    transition: 0.5s;
+    transition-property: background;
+
+}
+
+.slidebar a:hover{
+    background: #1983D3;
+}
+
+.slidebar i{
+    padding-right: 10px;
+}
+
+label #sidebar_btn{
+    z-index: 1;
+    color: #fff;
+    position: fixed;
+    cursor: pointer;
+    left: 300px;
+    font-size: 20px;
+    margin: 5px 0;
+    transition: 0.5s;
+    transition-property: background;
+
+}
+
+label #sidebar_btn:hover{
+    color: #1983D3;
+}
+
+#check:checked ~ .slidebar{
+    left: -190px;
+}
+
+#check:checked ~ .slidebar  a span{
+    display: none;
+}
+
+#check:checked ~ .slidebar a{
+    font-size: 20px;
+    margin-left: 170px;
+    line-height: 30px;
+    width: 80px;
+    padding: 40px;
+}
+
+.content{
+    margin-left: 250px;
+    background: url('b1.jpg') no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    transition: 0.5s;
+    
+}
+
+#check:checked ~ .content {
+    margin-left: 60px;
+}
+
+#check{
+    display: none;
+}
+
+
+.conteudo .Qr_contacto h1 {
+    text-align: left;
+    color: black;
+}
+
+.conteudo .Qr_contacto p {
+    text-align: left;
+
+}
+
+
+
+#check:checked ~ .slidebar a{
+    font-size: 20px;
+    margin-left: 170px;
+    line-height: 30px;
+    width: 80px;
+    padding: 40px;
+}

@@ -1,0 +1,171 @@
+*{
+    padding: 0px;
+    margin: 0px;
+
+}
+
+body{
+    /*background: linear-gradient(to right top, #65dfc9, #6cdbed); */
+    background: #65dfc9;
+}
+
+/* importacoa das fontes */
+@font-face{
+    font-family: "theboldfont";
+    src: url("theboldfont.ttf") format("truetype");
+}
+
+
+@font-face{
+    font-family: "theboldfont";
+    src: url("Heatslide.otf") format("opentype");
+}
+
+.personal-date{
+    position: relative;
+    background-color: red;
+}
+
+/* estilisar o cabecario da apresentacao */
+
+
+
+.cabecario{
+    position: absolute;
+    left: 40%;
+    top: 30%;
+    padding: 10px;
+    margin: 30px auto;
+    font-family: 'theboldfnt';
+}
+
+ .avatar{
+    width: 150px;
+    height: 150px;
+    border-radius: 100px;
+    position: absolute;
+    top: 190%;
+    left: 59px;
+    margin: 0px auto;
+    margin-bottom: 100px;
+    border: 4px solid white;
+}
+
+.descricao{
+    padding: 10px;
+    font-size: 1rem;
+    color: white;
+    position: absolute;
+    top: 1100%;
+    left: -150px;
+    width: 600px;
+    text-align: center;
+}
+
+.descricao h1{
+    margin-bottom: 5px;
+    font-size: 40px;
+    font-family: 'theboldfnt';
+    color: white;
+}
+.descricao h1 span{
+   font-family: 'theboldfnt';
+    color: black; 
+}
+
+
+.descricao p{
+    font-size: 25px;
+    font-family: 'ariel';
+    
+}
+
+
+.descricao p span{
+    font-family: 'theboldfnt';
+    color: white;
+    background-color: black;
+    border-radius:2px 4px;
+}
+
+.links{
+    position: absolute;
+    top: 450px;
+    color: white;
+    padding: 5px;
+    width: 500px;
+    
+    content: center;   
+}
+
+.links a{
+    padding: 15px;
+    text-decoration: none;
+    
+
+}
+
+.links a span{
+    text-decoration: none;
+}
+
+
+.links i{
+    padding: 10px;
+    color: white;
+    font-size: 30px;
+    transition: 0.5s;
+    transition-property: color;
+    
+}
+.links i:hover{
+    
+    color: black;
+}
+
+.rotulo{
+    position: absolute;
+    top: 500px;
+    left:25px;
+    color: white;
+    width: 500px;
+    content:center;
+    
+    
+}
+
+.rotulo span{
+    padding: 5px;
+    margin-bottom: 15px;
+}
+
+.Qrcode{
+    
+    position: relative;
+    left: 20px;
+    color: white;
+    width: 500px;
+    content:center;
+    align: center;
+    margin-top:40px;
+}
+.Qrcode img{
+    width: 150px;
+    height: 150px;
+    margin-top:5px;
+    margin-left: 20px;
+    border: 4px solid white;
+    
+}
+
+
+.sidebar{
+    position:relative;
+    background: black;
+    width: 250px;
+    height:100%;
+}
+/*zona media, mobile first*/
+@media(9500){
+
+}
