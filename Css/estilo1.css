@@ -22,9 +22,8 @@ body{
 
 /* conteudo central */
 .conteudo{
- 
+    z-index: 1;
     width: 400px;
-    
     margin: 0px auto;
     margin-top: 50px;
     color: white;
@@ -110,11 +109,10 @@ body{
 }
 
 
-
 /* Tratamento do slide bar*/
 
 .slidebar{
-    background:#65dfc9;
+    
     margin-top: 0px;
     padding-top: 30px;
     position: fixed;
@@ -152,6 +150,11 @@ body{
 .slidebar i:hover{
     color: black;
 }
+
+
+/* Menu para resposvel*/
+
+
 /* conexao entre o botao e o slidebar*/
 
 
@@ -161,7 +164,7 @@ label #sidebar_btn{
     position: fixed;
     cursor: pointer;
     left: 20px;
-    top: 20px;
+    top: 5px;
     font-size: 20px;
     margin: 5px 0;
     transition: 0.5s;
@@ -185,3 +188,130 @@ label #sidebar_btn:hover{
     display: none;
 }
 
+#check_mob{
+    display: none;
+}
+
+
+
+/* area resposivel*/
+@media screen and (max-width: 780px){
+
+    .slidebar{
+        display: none;
+    }
+
+    label #sidebar_btn{
+        display: none;
+    }
+    
+
+
+    .slidebar__resposa{
+
+        background:#65dfc9;;
+        margin-top: 0px;
+        padding-top: 30px;
+        position: fixed;
+        left: 0px;
+        width: 100%;
+        transition: 0.5s;
+        transition-property: left;
+        text-align: center;
+        visibility: hidden;
+    }
+    
+    
+    .slidebar__resposa a{
+        color: #fff;
+        display: block;
+        width: 100%;
+        line-height: 60px;
+        text-decoration: none;
+        padding-left: 40px;
+        box-sizing: border-box;
+        transition: 0.5s;
+        transition-property: background;
+        font-family: 'theboldfnt';
+        
+    
+    
+    }
+    .slidebar__resposa i{
+        padding-right: 10px;
+        transition: 0.5s;
+        transition-property: left;
+        font-size: 30px;
+    }
+    
+
+    .slidebar__resposa a:hover{
+    background:#7aebd6;
+    
+    }
+
+    .slidebar__resposa i:hover{
+        color:black;
+    }
+
+
+    label #sidebar_btn_mob{
+        z-index: 1;
+        color: #fff;
+        position: fixed;
+        cursor: pointer;
+        right: 20px;
+        top: 5px;
+        font-size: 20px;
+        margin: 5px 0;
+        transition: 0.5s;
+        transition-property: background;
+    
+    }
+
+ 
+
+
+    .conteudo{
+        /*z-index: 1;*/
+        width: 400px;
+        margin: 0px auto;
+       /* margin-top: 0px;*/
+        color: white;
+        font-family: 'theboldfont';
+        text-align: center;
+        align-content: center;
+    }
+    
+    #check_mob:checked ~ .conteudo {
+        
+        padding-top: 280px;
+    }
+    
+
+
+    #check_mob:checked ~ .slidebar__resposa{
+        visibility: visible;
+        position: fixed;
+        margin-top: 0px;
+    }
+    
+ 
+    
+
+}
+
+
+@media screen and (min-width: 780px){
+
+    .slidebar__resposa{
+        display: none;
+        
+    }
+
+    label #sidebar_btn_mob{
+        display: none;
+    }
+    
+
+}
