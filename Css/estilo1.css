@@ -1,0 +1,366 @@
+*{
+    padding: 0px;
+    margin: 0px;
+
+}
+body{
+    background: linear-gradient(225deg, #282A36, #1e202b); 
+   /* background: #282A36;*/
+   animation: animando_background 5s ease infinite alternate;
+   background-size: 300% 300%;
+}
+
+/* importacoa das fontes */
+@font-face{
+    font-family: "theboldfont";
+    src: url("../Fonte/theboldfont.ttf") format("truetype");
+}
+
+
+@font-face{
+    font-family: "Heatslide";
+    src: url("../Fonte/Heatslide.otf") format("opentype");
+}
+
+/* conteudo central */
+.conteudo{
+    z-index: 1;
+    max-width: 800px;
+    margin: 0px auto;
+    margin-top: 50px;
+    color: white;
+    font-family: 'theboldfont';
+    text-align: center;
+    align-content: center;
+}
+
+.conteudo .cabecari{
+    margin-bottom: 10px;
+}
+
+.conteudo .avatar{
+
+    width: 150px;
+    height: 150px;
+    border-radius: 100px;
+    margin: 10px auto;
+    margin-bottom: 10px;
+    border: 4px solid #65dfc9;
+    visibility: hidden;
+    animation: animando_entrada 5s ease infinite alternate;
+}
+
+.conteudo .descricao h1{
+
+    margin-bottom: 16px;
+}
+
+.conteudo .descricao span{
+    color:#65dfc9;
+}
+
+.conteudo .descricao p{
+    margin-bottom: 16px;
+    width: 350px;
+    /* margin-left: 230px; */
+    margin: 10px auto;
+}
+
+.conteudo .links {
+    padding: 5px;
+    margin-bottom: 20px;
+}
+
+.conteudo .links a{
+    padding: 15px;
+    text-decoration: none;
+}
+
+.conteudo .links i{
+    padding: 10px;
+    color: #65dfc9;
+    font-size: 30px;
+    transition: 0.5s;
+    transition-property: color;
+    
+}
+
+
+.conteudo .links i:hover{
+    
+    color: #a2e7db;
+    
+}
+.conteudo .links span{
+    padding: 10px;
+    text-decoration: none;
+    margin-bottom: 100px;
+    transition: 0.5s;
+    transition-property: color;
+    
+}
+
+
+.Qr_contacto h1{
+    background: #65dfc9;
+    width: 350px;
+    margin: 10px auto;
+    animation: animando_Scan 5s ease infinite alternate;
+    
+}
+.conteudo .Qr_contacto p{
+    margin-bottom: 10px;
+}
+
+.conteudo .Qr_contacto .Qrcode{
+    width: 150px;
+    height: 150px;
+    margin-top:5px;
+    margin-left: 20px;
+    
+    
+}
+
+@keyframes animando_background{
+    0%{
+        background-position: 0% 0%;
+    }
+    50%{
+        background-position: 50% 75%;
+    }
+    100%{
+        background-position: 25% 100%;
+    }
+}
+
+@keyframes animando_Scan{
+    0%{
+        background:#65dfc9 ;
+        color:white
+    }
+    50%{
+        background: white;
+        color:#65dfc9;
+
+    }
+    100%{
+        background:#65dfc9 ;
+        color:white
+    }
+}
+
+@keyframes animando_entrada{
+    0%{
+        visibility: hidden; 
+    }
+    50%{
+        visibility: visible;
+    }
+}
+
+/* Tratamento do slide bar*/
+
+.slidebar{
+    
+    margin-top: 0px;
+    padding-top: 30px;
+    position: fixed;
+    left: 0px;
+    width: 200px;
+    height: 100%;
+    transition: 0.5s;
+    transition-property: left;
+    
+    visibility: hidden;
+}
+
+
+.slidebar a{
+    color: #fff;
+    display: block;
+    width: 100%;
+    line-height: 60px;
+    text-decoration: none;
+    padding-left: 40px;
+    box-sizing: border-box;
+    transition: 0.5s;
+    transition-property: background;
+    font-family: 'theboldfnt';
+
+
+}
+.slidebar i{
+    padding-right: 10px;
+    transition: 0.5s;
+    transition-property: left;
+    font-size: 30px;
+}
+
+.slidebar i:hover{
+    color: black;
+}
+
+
+/* Menu para resposvel*/
+
+
+/* conexao entre o botao e o slidebar*/
+
+
+label #sidebar_btn{
+    z-index: 1;
+    color: #fff;
+    position: fixed;
+    cursor: pointer;
+    left: 20px;
+    top: 5px;
+    font-size: 20px;
+    margin: 5px 0;
+    transition: 0.5s;
+    transition-property: background;
+
+}
+
+label #sidebar_btn:hover{
+    color: black;
+}
+
+#check:checked ~ .slidebar{
+    visibility: visible;
+}
+
+#check:checked ~ .content {
+    margin-left: 60px;
+}
+
+#check{
+    display: none;
+}
+
+#check_mob{
+    display: none;
+}
+
+
+
+/* area resposivel*/
+@media screen and (max-width: 780px){
+
+    .slidebar{
+        display: none;
+    }
+
+    label #sidebar_btn{
+        display: none;
+    }
+    
+
+
+    .slidebar__resposa{
+
+        background:#65dfc9;
+        margin-top: 0px;
+        padding-top: 30px;
+        position: fixed;
+        left: 0px;
+        width: 100%;
+        transition: 0.5s;
+        transition-property: left;
+        text-align: center;
+        visibility: hidden;
+    }
+    
+    
+    .slidebar__resposa a{
+        color: #fff;
+        display: block;
+        width: 100%;
+        line-height: 60px;
+        text-decoration: none;
+        padding-left: 40px;
+        box-sizing: border-box;
+        transition: 0.5s;
+        transition-property: background;
+        font-family: 'theboldfnt';
+        
+    
+    
+    }
+    .slidebar__resposa i{
+        padding-right: 10px;
+        transition: 0.5s;
+        transition-property: left;
+        font-size: 30px;
+    }
+    
+
+    .slidebar__resposa a:hover{
+    background:#7aebd6;
+    
+    }
+
+    .slidebar__resposa i:hover{
+        color:black;
+    }
+
+
+    label #sidebar_btn_mob{
+        z-index: 1;
+        color: #fff;
+        position: fixed;
+        cursor: pointer;
+        right: 20px;
+        top: 5px;
+        font-size: 20px;
+        margin: 5px 0;
+        transition: 0.5s;
+        transition-property: background;
+    
+    }
+
+ 
+
+
+    .conteudo{
+        /*z-index: 1;*/
+        width: 400px;
+        margin: 0px auto;
+       /* margin-top: 0px;*/
+        color: white;
+        font-family: 'theboldfont';
+        text-align: center;
+        align-content: center;
+    }
+    
+    #check_mob:checked ~ .conteudo {
+        
+        padding-top: 280px;
+    }
+    
+
+
+    #check_mob:checked ~ .slidebar__resposa{
+        visibility: visible;
+        position: fixed;
+        margin-top: 0px;
+    }
+    
+ 
+    
+
+}
+
+
+@media screen and (min-width: 780px){
+
+    .slidebar__resposa{
+        display: none;
+        
+    }
+
+    label #sidebar_btn_mob{
+        display: none;
+    }
+    
+
+}
